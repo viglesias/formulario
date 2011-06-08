@@ -1,0 +1,18 @@
+<h1>Listado de páginas</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for page in @pages %>
+  <tr>
+    <td><%= link_to 'Detalle', page_path(@questionnaire, page) %></td>
+    <td><%= link_to 'Editar', edit_page_path(@questionnaire, page) %></td>
+    <td><%= link_to 'Borrar', page_path(@questionnaire, page), :confirm => '¿Está seguro de borrar la página?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva página', new_page_path(@questionnaire) %>

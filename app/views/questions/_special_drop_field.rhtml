@@ -1,0 +1,42 @@
+
+<%= start_question @question %>
+<% if @editing -%>
+	<table>
+		<tr>
+		<td><%= text_field_tag "question[#{@question.id}]", value %></td>
+		<td><%= select_tag "question[#{@question.id}]", '<option value="0">Nivel...</option><option value="alto">Alto</option><option value="medio">Medio</option><option value="bajo">Bajo</option>' %></td>
+		<td><%= select_tag "question[#{@question.id}]", '<option value="0">Modalidad...</option><option value="presencial">Presencial</option><option value="elearning">Elearning</option><option value="mixta">Mixta</option>' %></td>
+		</tr>
+	</table>
+<% else -%>
+	<table>
+		<tr>
+		<td><%= text_field_tag "question[#{@question.id}]", value %></td>
+		<td><%= select_tag "question[#{@question.id}]", options_for_select(@question.options_for_select, value) %></td>
+		<td><%= select_tag "question[#{@question.id}]", options_for_select(@question.options_for_select, value) %></td>
+		</tr>
+	</table>
+	
+	
+	
+<% end -%>
+<%= end_question @question %>
+
+
+<%= start_question @question %>
+<% if @editing -%>
+        <%= render :partial => 'questions/selectorstart' %>
+	<%= select "question[]", "default_answer", @question.options_for_select, {},
+	      {:onChange => "updateDefault(#{@question.id}, this.value);" } %>
+	<script type="text/javascript">
+	  $('question_<%=@question.id%>_default_answer').ddoptions = {
+	  <% @question.question_options.each do |o| %>
+		  '<%= escape_javascript o.option %>': <%= o.id %>,
+		<% end -%>
+		};
+	</script>
+	<%= render :partial => 'questions/selectorend' %>
+<% else -%>
+	<%= select_tag "question[#{@question.id}]", options_for_select(@question.options_for_select, value) %>
+<% end -%>
+<%= end_question @question %>

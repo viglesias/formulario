@@ -1,0 +1,12 @@
+<%= render :partial => "toolbar" %>
+
+<div class="propertypage">
+  <h2>Exportar</h2>
+  <p>Exportar el cuestionario a un fichero con formato XML. Despu&eacute;s se puede modificar e importar de nuevo y crear un cuestionario nuevo.</p> 
+  <p><b>Esta exportaci&oacute;n solo incluye las preguntas, no las respuestas.</b> Si desea exportar las respuestas, por favor, vaya a la secci&oacute;n de respuestas.</p>  
+  <%= button_to "Exportar a XML", questionnaire_path(@questionnaire, :format => "xml"), :method => "get" %>
+  
+  <h2>Visualizar</h2>
+  <p>Visualizar el cuestionario como lo ver&iacute;a el usuario.</p> 
+  <%= button_to "Visualizar", { :action => "print", :id => @questionnaire.id }, :method => "get" %>
+</div>

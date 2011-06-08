@@ -1,0 +1,976 @@
+# Logfile created on 2011-06-08 08:45:33 +0200  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Pages (1)
+Migrating to CreateCheckouts (2)
+Migrating to AddSpecialFieldAssociations (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `answers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `checkouts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `checkouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `checkouts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `question_options`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `question_options`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `question_options`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `questionnaires`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `questionnaires`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `responses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `responses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `responses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `special_field_associations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `special_field_associations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `special_field_associations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Pages (1)
+Migrating to CreateCheckouts (2)
+Migrating to AddSpecialFieldAssociations (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `answers`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `checkouts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `checkouts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `checkouts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `question_options`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `question_options`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `question_options`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `questionnaires`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `questionnaires`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `responses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `responses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `responses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `special_field_associations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `special_field_associations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `special_field_associations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#index (for 127.0.0.1 at 2011-06-08 08:55:13) [GET]
+  [4;36;1mQuestionnaire Load (0.3ms)[0m   [0;1mSELECT * FROM `questionnaires` ORDER BY id DESC[0m
+Rendering template within layouts/application
+Rendering questionnaires/index
+Rendered questionnaires/_outer_tabs (1.1ms)
+Rendered questionnaires/_paged_results (0.7ms)
+Completed in 152ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 08:55:13) [GET]
+Rendering stylesheets/journey
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 08:55:14) [GET]
+Rendering stylesheets/questionnaire
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 08:55:14) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#new (for 127.0.0.1 at 2011-06-08 08:55:17) [GET]
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` ORDER BY id DESC[0m
+Rendering template within layouts/application
+Rendering questionnaires/new
+Rendered questionnaires/_outer_tabs (0.6ms)
+Rendered questionnaires/_creator_warnings (0.5ms)
+Rendered questionnaires/_creator_warnings (0.0ms)
+Completed in 65ms (View: 17, DB: 2) | 200 OK [http://localhost/questionnaires/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 08:55:17) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 08:55:17) [GET]
+Rendering stylesheets/questionnaire
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 08:55:17) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#create (for 127.0.0.1 at 2011-06-08 08:55:27) [POST]
+  Parameters: {"commit"=>"Crear", "questionnaire"=>{"title"=>"prueba cuestionario"}}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestionnaire Create (13.5ms)[0m   [0mINSERT INTO `questionnaires` (`is_open`, `allow_preview`, `allow_delete_responses`, `custom_css`, `created_at`, `title`, `allow_finish_later`, `rss_secret`, `publicly_visible`, `custom_html`, `updated_at`, `require_login`, `published_at`, `advertise_login`, `allow_amend_response`, `welcome_text`) VALUES(NULL, 0, 0, '', '2011-06-08 08:55:27', 'prueba cuestionario', 1, NULL, 1, '', '2011-06-08 08:55:27', 0, NULL, 1, 1, NULL)[0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.questionnaire_id = 1) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (questionnaire_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mPage Create (0.1ms)[0m   [0mINSERT INTO `pages` (`position`, `questionnaire_id`, `title`) VALUES(1, 1, 'Untitled page')[0m
+  [4;36;1mSQL (10.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/questionnaires/1
+Completed in 157ms (DB: 27) | 302 Found [http://localhost/questionnaires]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#show (for 127.0.0.1 at 2011-06-08 08:55:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.3ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering questionnaires/show
+  [4;35;1mResponse Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `responses`[0m
+  [4;36;1mSQL (15.9ms)[0m   [0;1mSELECT count(DISTINCT `responses`.id) AS count_all FROM `responses` LEFT OUTER JOIN `answers` ON answers.response_id = responses.id LEFT OUTER JOIN `questionnaires` ON `questionnaires`.id = `responses`.questionnaire_id WHERE (`responses`.questionnaire_id = 1 AND (responses.id in (select response_id from answers))) [0m
+Rendered questionnaires/_toplevel_tabs (29.1ms)
+Rendered questionnaires/_toolbar (33.3ms)
+  [4;35;1mQuestion Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `questions`.id) AS count_all FROM `questions` LEFT OUTER JOIN `pages` pages_questions ON `pages_questions`.id = `questions`.page_id INNER JOIN `pages` ON `questions`.page_id = `pages`.id WHERE ((`pages`.questionnaire_id = 1) AND ((type in ('Questions::TextField', 'Questions::BigTextField', 'Questions::RangeField', 'Questions::CheckBoxField', 'Questions::DropDownField', 'Questions::RadioField', 'Questions::FormaLabel', 'Questions::FormaTextField', 'Questions::FormaDropDownFieldMod', 'Questions::FormaDropDownFieldNivel', 'Questions::FormaHeading', 'Questions::FormaHeadingTitle', 'Questions::FormaDataTextField')) AND (type in ('Questions::TextField', 'Questions::BigTextField', 'Questions::RangeField', 'Questions::CheckBoxField', 'Questions::DropDownField', 'Questions::RadioField', 'Questions::FormaLabel', 'Questions::FormaTextField', 'Questions::FormaDropDownFieldMod', 'Questions::FormaDropDownFieldNivel', 'Questions::FormaHeading', 'Questions::FormaHeadingTitle', 'Questions::FormaDataTextField')))) [0m
+Rendered questionnaires/_html_editor (1.4ms)
+Completed in 170ms (View: 105, DB: 20) | 200 OK [http://localhost/questionnaires/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 08:55:28) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 08:55:28) [GET]
+Rendering stylesheets/questionnaire
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 08:55:28) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 08:55:29) [GET]
+  Parameters: {"1298550845"=>nil}
+Rendering stylesheets/questionnaire
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css?1298550845]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#show to json (for 127.0.0.1 at 2011-06-08 08:55:31) [GET]
+  Parameters: {"class"=>"Questionnaire", "attributes"=>["title"], "editing"=>"true", "id"=>"1", "on_complete"=>""}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Completed in 110ms (View: 1, DB: 2) | 200 OK [http://localhost/questionnaires/1.json?class=Questionnaire&on_complete=&editing=true&attributes%5B%5D=title]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#update to json (for 127.0.0.1 at 2011-06-08 08:55:39) [PUT]
+  Parameters: {"title"=>"modificando titulo", "id"=>"1", "questionnaire"=>{"title"=>"modificando titulo", "id"=>"1"}}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestionnaire Update (0.3ms)[0m   [0;1mUPDATE `questionnaires` SET `updated_at` = '2011-06-08 08:55:39', `title` = 'modificando titulo' WHERE `id` = 1[0m
+  [4;35;1mSQL (10.2ms)[0m   [0mCOMMIT[0m
+Completed in 64ms (View: 1, DB: 12) | 200 OK [http://localhost/questionnaires/1.json?title=modificando%20titulo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#edit (for 127.0.0.1 at 2011-06-08 08:55:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestionnaire Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.3ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.* FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+  [4;35;1mPage Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering questionnaires/edit
+  [4;36;1mResponse Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `responses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(DISTINCT `responses`.id) AS count_all FROM `responses` LEFT OUTER JOIN `answers` ON answers.response_id = responses.id LEFT OUTER JOIN `questionnaires` ON `questionnaires`.id = `responses`.questionnaire_id WHERE (`responses`.questionnaire_id = 1 AND (responses.id in (select response_id from answers))) [0m
+Rendered questionnaires/_toplevel_tabs (11.0ms)
+Rendered questionnaires/_toolbar (18.3ms)
+Completed in 144ms (View: 76, DB: 4) | 200 OK [http://localhost/questionnaires/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 08:55:48) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 08:55:48) [GET]
+Rendering stylesheets/questionnaire
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 08:55:48) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2011-06-08 08:55:48) [GET]
+  Parameters: {"questionnaire_id"=>"1", "id"=>"1"}
+  [4;36;1mQuestionnaire Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mQuestion Load (0.3ms)[0m   [0;1mSELECT `questions`.* FROM `questions` WHERE (`questions`.page_id = 1) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Rendering template within layouts/answer
+Rendering pages/edit
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+Completed in 128ms (View: 23, DB: 3) | 200 OK [http://localhost/questionnaires/1/pages/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 08:55:48) [GET]
+Rendering stylesheets/questionnaire
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 08:55:49) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#create to json (for 127.0.0.1 at 2011-06-08 08:55:51) [POST]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>nil, "type"=>"Questions::TextField", "question"=>{"type"=>"Questions::TextField"}}
+  [4;36;1mQuestionnaire Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mQuestion Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Load (0.3ms)[0m   [0mSELECT * FROM `questions` WHERE (page_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mQuestion Create (0.2ms)[0m   [0;1mINSERT INTO `questions` (`position`, `required`, `step`, `layout`, `max`, `page_id`, `type`, `caption`, `min`, `default_answer`) VALUES(1, 0, 1, 'left', 0, 1, '', '', 0, NULL)[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Update (0.2ms)[0m   [0mUPDATE `questions` SET `type` = 'Questions::TextField' WHERE `id` = 1[0m
+  [4;36;1mSQL (26.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mQuestion Load (0.3ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mQuestions::TextField Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSpecialFieldAssociation Load (0.3ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+  [4;35;1mQuestions::TextField Update (0.3ms)[0m   [0mUPDATE `questions` SET `caption` = 'Pulse aqu’ para escribir una pregunta' WHERE `id` = 1[0m
+  [4;36;1mSQL (13.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 223ms (View: 5, DB: 80) | 201 Created [http://localhost/questionnaires/1/pages/1/questions.json?type=Questions%3A%3ATextField&id]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#edit (for 127.0.0.1 at 2011-06-08 08:55:52) [GET]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>"1"}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.2ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mQuestions::TextField Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering questions/edit
+  [4;36;1mSpecialFieldAssociation Load (0.2ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+Rendered questions/_questionstart (6.9ms)
+Rendered questions/_moreoptions (3.5ms)
+Rendered questions/_questionend (6.4ms)
+Rendered questions/_text_field (21.3ms)
+Completed in 165ms (View: 31, DB: 5) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show to json (for 127.0.0.1 at 2011-06-08 08:55:54) [GET]
+  Parameters: {"questionnaire_id"=>"1", "class"=>"Question", "attributes"=>["caption"], "page_id"=>"1", "editing"=>"true", "id"=>"1", "on_complete"=>""}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.1ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mQuestions::TextField Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+Completed in 132ms (View: 1, DB: 4) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/1.json?class=Question&on_complete=&editing=true&attributes%5B%5D=caption]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show to json (for 127.0.0.1 at 2011-06-08 08:56:06) [GET]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>"1"}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mQuestions::TextField Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+Completed in 135ms (View: 1, DB: 4) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/1.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#update to json (for 127.0.0.1 at 2011-06-08 08:56:07) [PUT]
+  Parameters: {"required"=>"false", "position"=>"1", "questionnaire_id"=>"1", "step"=>"1", "layout"=>"left", "page_id"=>"1", "max"=>"0", "id"=>"1", "caption"=>"titulo del cuestionario", "min"=>"0", "default_answer"=>"", "question"=>{"position"=>"1", "required"=>"false", "layout"=>"left", "step"=>"1", "max"=>"0", "page_id"=>"1", "id"=>"1", "caption"=>"titulo del cuestionario", "min"=>"0", "default_answer"=>"", "purpose"=>""}, "purpose"=>""}
+  [4;35;1mQuestionnaire Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mQuestions::TextField Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestions::TextField Update (0.3ms)[0m   [0;1mUPDATE `questions` SET `default_answer` = '', `caption` = 'titulo del cuestionario' WHERE `id` = 1[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mCOMMIT[0m
+Completed in 125ms (View: 1, DB: 12) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/1.json?required=false&position=1&step=1&layout=left&page_id=1&max=0&caption=titulo%20del%20cuestionario&min=0&default_answer=&purpose=]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#update to json (for 127.0.0.1 at 2011-06-08 08:56:07) [PUT]
+  Parameters: {"required"=>"false", "position"=>"1", "questionnaire_id"=>"1", "step"=>"1", "layout"=>"left", "page_id"=>"1", "max"=>"0", "id"=>"1", "caption"=>"Pulse aqu", "min"=>"0", "default_answer"=>"cuestionario de pruebas", "question"=>{"position"=>"1", "required"=>"false", "layout"=>"left", "step"=>"1", "max"=>"0", "page_id"=>"1", "id"=>"1", "caption"=>"Pulse aqu", "min"=>"0", "default_answer"=>"cuestionario de pruebas", "purpose"=>""}, "purpose"=>""}
+  [4;36;1mQuestionnaire Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mQuestion Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.2ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mQuestions::TextField Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSpecialFieldAssociation Load (0.1ms)[0m   [0mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestions::TextField Update (0.3ms)[0m   [0mUPDATE `questions` SET `default_answer` = 'cuestionario de pruebas', `caption` = 'Pulse aqu' WHERE `id` = 1[0m
+  [4;36;1mSQL (12.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 123ms (View: 1, DB: 16) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/1.json?required=false&position=1&step=1&layout=left&page_id=1&max=0&caption=Pulse%20aqu&min=0&default_answer=cuestionario%20de%20pruebas&purpose=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#destroy to json (for 127.0.0.1 at 2011-06-08 09:02:24) [DELETE]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>"1"}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.2ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mQuestions::TextField Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Update (0.3ms)[0m   [0mUPDATE `questions` SET position = (position - 1) WHERE (page_id = 1 AND position > 1) [0m
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 1) LIMIT 1[0m
+  [4;35;1mQuestions::TextField Update (0.2ms)[0m   [0mUPDATE `questions` SET `position` = NULL WHERE `id` = 1[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM `answers` WHERE (`answers`.question_id = 1) [0m
+  [4;35;1mQuestionOption Load (0.3ms)[0m   [0mSELECT * FROM `question_options` WHERE (`question_options`.question_id = 1) ORDER BY position[0m
+  [4;36;1mQuestions::TextField Destroy (0.2ms)[0m   [0;1mDELETE FROM `questions` WHERE `id` = 1[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mCOMMIT[0m
+Completed in 205ms (View: 1, DB: 50) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/1.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#create to json (for 127.0.0.1 at 2011-06-08 09:02:29) [POST]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>nil, "type"=>"Questions::FormaDataTextField", "question"=>{"type"=>"Questions::FormaDataTextField"}}
+  [4;36;1mQuestionnaire Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mQuestion Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Load (0.3ms)[0m   [0mSELECT * FROM `questions` WHERE (page_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mQuestion Create (0.2ms)[0m   [0;1mINSERT INTO `questions` (`position`, `required`, `step`, `layout`, `max`, `page_id`, `type`, `caption`, `min`, `default_answer`) VALUES(1, 0, 1, 'left', 0, 1, '', '', 0, NULL)[0m
+  [4;35;1mSQL (53.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Update (0.3ms)[0m   [0mUPDATE `questions` SET `type` = 'Questions::FormaDataTextField' WHERE `id` = 2[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mQuestion Load (0.2ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestions::FormaDataTextField Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSpecialFieldAssociation Load (0.3ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 2) LIMIT 1[0m
+  [4;35;1mQuestions::FormaDataTextField Update (0.2ms)[0m   [0mUPDATE `questions` SET `caption` = 'Pulse aqu’ para escribir una pregunta' WHERE `id` = 2[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 219ms (View: 1, DB: 73) | 201 Created [http://localhost/questionnaires/1/pages/1/questions.json?type=Questions%3A%3AFormaDataTextField&id]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#edit (for 127.0.0.1 at 2011-06-08 09:02:29) [GET]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>"2"}
+  [4;35;1mQuestionnaire Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.2ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;36;1mQuestions::FormaDataTextField Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering questions/edit
+  [4;36;1mSpecialFieldAssociation Load (0.3ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 2) LIMIT 1[0m
+Rendered questions/_questionstart (5.7ms)
+Rendered questions/_moreoptions (7.7ms)
+Rendered questions/_questionend (52.5ms)
+Rendered questions/_forma_data_text_field (59.4ms)
+Completed in 126ms (View: 63, DB: 4) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#create to json (for 127.0.0.1 at 2011-06-08 09:02:29) [POST]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>nil, "type"=>"Questions::FormaDataTextField", "question"=>{"type"=>"Questions::FormaDataTextField"}}
+  [4;35;1mQuestionnaire Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestion Load (0.4ms)[0m   [0;1mSELECT * FROM `questions` WHERE (page_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mQuestion Create (0.1ms)[0m   [0mINSERT INTO `questions` (`position`, `required`, `step`, `layout`, `max`, `page_id`, `type`, `caption`, `min`, `default_answer`) VALUES(2, 0, 1, 'left', 0, 1, '', '', 0, NULL)[0m
+  [4;36;1mSQL (49.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestion Update (0.2ms)[0m   [0;1mUPDATE `questions` SET `type` = 'Questions::FormaDataTextField' WHERE `id` = 3[0m
+  [4;35;1mSQL (11.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mQuestion Load (0.2ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+  [4;35;1mQuestions::FormaDataTextField Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSpecialFieldAssociation Load (0.2ms)[0m   [0mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 3) LIMIT 1[0m
+  [4;36;1mQuestions::FormaDataTextField Update (0.3ms)[0m   [0;1mUPDATE `questions` SET `caption` = 'Pulse aqu’ para escribir una pregunta' WHERE `id` = 3[0m
+  [4;35;1mSQL (20.5ms)[0m   [0mCOMMIT[0m
+Completed in 195ms (View: 1, DB: 87) | 201 Created [http://localhost/questionnaires/1/pages/1/questions.json?type=Questions%3A%3AFormaDataTextField&id]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#edit (for 127.0.0.1 at 2011-06-08 09:02:30) [GET]
+  Parameters: {"questionnaire_id"=>"1", "page_id"=>"1", "id"=>"3"}
+  [4;36;1mQuestionnaire Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mQuestion Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.2ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+  [4;35;1mQuestions::FormaDataTextField Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering questions/edit
+  [4;35;1mSpecialFieldAssociation Load (0.3ms)[0m   [0mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 3) LIMIT 1[0m
+Rendered questions/_questionstart (7.7ms)
+Rendered questions/_moreoptions (2.8ms)
+Rendered questions/_questionend (3.3ms)
+Rendered questions/_forma_data_text_field (11.8ms)
+Completed in 121ms (View: 14, DB: 4) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/3/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show to json (for 127.0.0.1 at 2011-06-08 09:02:31) [GET]
+  Parameters: {"questionnaire_id"=>"1", "class"=>"Question", "attributes"=>["caption"], "page_id"=>"1", "editing"=>"true", "id"=>"2", "on_complete"=>""}
+  [4;36;1mQuestionnaire Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mQuestion Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.2ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;35;1mQuestions::FormaDataTextField Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSpecialFieldAssociation Load (0.1ms)[0m   [0mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 2) LIMIT 1[0m
+Completed in 143ms (View: 1, DB: 5) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/2.json?class=Question&on_complete=&editing=true&attributes%5B%5D=caption]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#update to json (for 127.0.0.1 at 2011-06-08 09:02:40) [PUT]
+  Parameters: {"required"=>"false", "position"=>"1", "questionnaire_id"=>"1", "step"=>"1", "layout"=>"left", "page_id"=>"1", "max"=>"0", "id"=>"2", "caption"=>"Campo de informaciÃ³n", "min"=>"0", "default_answer"=>"", "question"=>{"position"=>"1", "required"=>"false", "layout"=>"left", "step"=>"1", "max"=>"0", "page_id"=>"1", "id"=>"2", "caption"=>"Campo de informaciÃ³n", "min"=>"0", "default_answer"=>"", "purpose"=>""}, "purpose"=>""}
+  [4;36;1mQuestionnaire Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mQuestion Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.1ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+  [4;35;1mQuestions::FormaDataTextField Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSpecialFieldAssociation Load (0.1ms)[0m   [0mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestions::FormaDataTextField Update (0.3ms)[0m   [0mUPDATE `questions` SET `default_answer` = '', `caption` = 'Campo de informaciÃ³n' WHERE `id` = 2[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 149ms (View: 1, DB: 9) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/2.json?required=false&position=1&step=1&layout=left&page_id=1&max=0&caption=Campo%20de%20informaci%C3%B3n&min=0&default_answer=&purpose=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show to json (for 127.0.0.1 at 2011-06-08 09:02:41) [GET]
+  Parameters: {"questionnaire_id"=>"1", "class"=>"Question", "attributes"=>["caption"], "page_id"=>"1", "editing"=>"true", "id"=>"3", "on_complete"=>""}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.2ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+  [4;36;1mQuestions::FormaDataTextField Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 3) LIMIT 1[0m
+Completed in 141ms (View: 1, DB: 5) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/3.json?class=Question&on_complete=&editing=true&attributes%5B%5D=caption]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#update to json (for 127.0.0.1 at 2011-06-08 09:02:49) [PUT]
+  Parameters: {"required"=>"false", "position"=>"2", "questionnaire_id"=>"1", "step"=>"1", "layout"=>"left", "page_id"=>"1", "max"=>"0", "id"=>"3", "caption"=>"aaaaaa", "min"=>"0", "default_answer"=>"", "question"=>{"position"=>"2", "required"=>"false", "layout"=>"left", "step"=>"1", "max"=>"0", "page_id"=>"1", "id"=>"3", "caption"=>"aaaaaa", "min"=>"0", "default_answer"=>"", "purpose"=>""}, "purpose"=>""}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mQuestion Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.1ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 3) [0m
+  [4;36;1mQuestions::FormaDataTextField Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT * FROM `special_field_associations` WHERE (`special_field_associations`.question_id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestions::FormaDataTextField Update (0.3ms)[0m   [0;1mUPDATE `questions` SET `default_answer` = '', `caption` = 'aaaaaa' WHERE `id` = 3[0m
+  [4;35;1mSQL (11.6ms)[0m   [0mCOMMIT[0m
+Completed in 155ms (View: 1, DB: 16) | 200 OK [http://localhost/questionnaires/1/pages/1/questions/3.json?required=false&position=2&step=1&layout=left&page_id=1&max=0&caption=aaaaaa&min=0&default_answer=&purpose=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#show to json (for 127.0.0.1 at 2011-06-08 09:02:54) [GET]
+  Parameters: {"questionnaire_id"=>"1", "id"=>"1"}
+  [4;36;1mQuestionnaire Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Completed in 130ms (View: 1, DB: 2) | 200 OK [http://localhost/questionnaires/1/pages/1.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update to json (for 127.0.0.1 at 2011-06-08 09:02:58) [PUT]
+  Parameters: {"position"=>"1", "questionnaire_id"=>"1", "title"=>"pagina", "id"=>"1", "page"=>{"position"=>"1", "questionnaire_id"=>"1", "title"=>"pagina", "id"=>"1"}}
+  [4;35;1mQuestionnaire Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Update (0.3ms)[0m   [0mUPDATE `pages` SET `title` = 'pagina' WHERE `id` = 1[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 136ms (View: 1, DB: 8) | 200 OK [http://localhost/questionnaires/1/pages/1.json?position=1&questionnaire_id=1&title=pagina]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#show (for 127.0.0.1 at 2011-06-08 09:03:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mQuestionnaire Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering questionnaires/show
+  [4;35;1mResponse Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `responses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(DISTINCT `responses`.id) AS count_all FROM `responses` LEFT OUTER JOIN `answers` ON answers.response_id = responses.id LEFT OUTER JOIN `questionnaires` ON `questionnaires`.id = `responses`.questionnaire_id WHERE (`responses`.questionnaire_id = 1 AND (responses.id in (select response_id from answers))) [0m
+Rendered questionnaires/_toplevel_tabs (16.7ms)
+Rendered questionnaires/_toolbar (18.5ms)
+  [4;35;1mQuestion Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(DISTINCT `questions`.id) AS count_all FROM `questions` LEFT OUTER JOIN `pages` pages_questions ON `pages_questions`.id = `questions`.page_id INNER JOIN `pages` ON `questions`.page_id = `pages`.id WHERE ((`pages`.questionnaire_id = 1) AND ((type in ('Questions::TextField', 'Questions::BigTextField', 'Questions::RangeField', 'Questions::CheckBoxField', 'Questions::DropDownField', 'Questions::RadioField', 'Questions::FormaLabel', 'Questions::FormaTextField', 'Questions::FormaDropDownFieldMod', 'Questions::FormaDropDownFieldNivel', 'Questions::FormaHeading', 'Questions::FormaHeadingTitle', 'Questions::FormaDataTextField')) AND (type in ('Questions::TextField', 'Questions::BigTextField', 'Questions::RangeField', 'Questions::CheckBoxField', 'Questions::DropDownField', 'Questions::RadioField', 'Questions::FormaLabel', 'Questions::FormaTextField', 'Questions::FormaDropDownFieldMod', 'Questions::FormaDropDownFieldNivel', 'Questions::FormaHeading', 'Questions::FormaHeadingTitle', 'Questions::FormaDataTextField')))) [0m
+Rendered questionnaires/_html_editor (0.9ms)
+Completed in 211ms (View: 90, DB: 4) | 200 OK [http://localhost/questionnaires/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 09:03:06) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:06) [GET]
+Rendering stylesheets/questionnaire
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 09:03:06) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:07) [GET]
+  Parameters: {"1298550845"=>nil}
+Rendering stylesheets/questionnaire
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css?1298550845]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#edit (for 127.0.0.1 at 2011-06-08 09:03:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mQuestionnaire Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.* FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+  [4;36;1mPage Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering questionnaires/edit
+  [4;35;1mResponse Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `responses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(DISTINCT `responses`.id) AS count_all FROM `responses` LEFT OUTER JOIN `answers` ON answers.response_id = responses.id LEFT OUTER JOIN `questionnaires` ON `questionnaires`.id = `responses`.questionnaire_id WHERE (`responses`.questionnaire_id = 1 AND (responses.id in (select response_id from answers))) [0m
+Rendered questionnaires/_toplevel_tabs (8.6ms)
+Rendered questionnaires/_toolbar (10.3ms)
+Completed in 135ms (View: 14, DB: 3) | 200 OK [http://localhost/questionnaires/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 09:03:08) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:08) [GET]
+Rendering stylesheets/questionnaire
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 09:03:08) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2011-06-08 09:03:09) [GET]
+  Parameters: {"questionnaire_id"=>"1", "id"=>"1"}
+  [4;35;1mQuestionnaire Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mQuestion Load (0.3ms)[0m   [0mSELECT `questions`.* FROM `questions` WHERE (`questions`.page_id = 1) ORDER BY position[0m
+  [4;36;1mQuestion Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestions::FormaDataTextField Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mQuestionOption Load (0.3ms)[0m   [0mSELECT `question_options`.* FROM `question_options` WHERE (`question_options`.question_id IN (2,3)) ORDER BY position[0m
+  [4;36;1mSpecialFieldAssociation Load (0.3ms)[0m   [0;1mSELECT `special_field_associations`.* FROM `special_field_associations` WHERE (`special_field_associations`.question_id IN (2,3)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Rendering template within layouts/answer
+Rendering pages/edit
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+Rendered questions/_questionstart (1.3ms)
+Rendered questions/_moreoptions (2.3ms)
+Rendered questions/_questionend (2.5ms)
+Rendered questions/_forma_data_text_field (4.5ms)
+Rendered questions/_questionstart (1.2ms)
+Rendered questions/_moreoptions (2.2ms)
+Rendered questions/_questionend (2.5ms)
+Rendered questions/_forma_data_text_field (4.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+Completed in 143ms (View: 20, DB: 4) | 200 OK [http://localhost/questionnaires/1/pages/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:09) [GET]
+Rendering stylesheets/questionnaire
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 09:03:09) [GET]
+Rendering stylesheets/journey
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#export (for 127.0.0.1 at 2011-06-08 09:03:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestionnaire Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering questionnaires/export
+  [4;36;1mResponse Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `responses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(DISTINCT `responses`.id) AS count_all FROM `responses` LEFT OUTER JOIN `answers` ON answers.response_id = responses.id LEFT OUTER JOIN `questionnaires` ON `questionnaires`.id = `responses`.questionnaire_id WHERE (`responses`.questionnaire_id = 1 AND (responses.id in (select response_id from answers))) [0m
+Rendered questionnaires/_toplevel_tabs (18.0ms)
+Rendered questionnaires/_toolbar (20.5ms)
+Completed in 140ms (View: 31, DB: 3) | 200 OK [http://localhost/questionnaires/1/export]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 09:03:18) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:18) [GET]
+Rendering stylesheets/questionnaire
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 09:03:18) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#print (for 127.0.0.1 at 2011-06-08 09:03:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestionnaire Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `questionnaires`[0m
+  [4;35;1mQuestionnaire Load (0.1ms)[0m   [0mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT `pages`.* FROM `pages` WHERE (`pages`.questionnaire_id = 1) ORDER BY position[0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mResponse Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `responses`[0m
+Rendering template within layouts/print
+Rendering questionnaires/print
+  [4;35;1mQuestion Load (0.4ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.page_id = 1) ORDER BY position[0m
+  [4;36;1mQuestion Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestions::FormaDataTextField Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mQuestionOption Load (0.1ms)[0m   [0mSELECT `question_options`.* FROM `question_options` WHERE (`question_options`.question_id IN (2,3)) ORDER BY position[0m
+  [4;36;1mSpecialFieldAssociation Load (0.1ms)[0m   [0;1mSELECT `special_field_associations`.* FROM `special_field_associations` WHERE (`special_field_associations`.question_id IN (2,3)) [0m
+Rendered questions/_questionstart (0.1ms)
+Rendered questions/_questionend (0.1ms)
+Rendered questions/_forma_data_text_field (1.0ms)
+Rendered questions/_questionstart (0.1ms)
+Rendered questions/_questionend (0.1ms)
+Rendered questions/_forma_data_text_field (0.7ms)
+Completed in 219ms (View: 84, DB: 6) | 200 OK [http://localhost/questionnaires/1/print]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:20) [GET]
+Rendering stylesheets/questionnaire
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 09:03:20) [GET]
+Rendering stylesheets/journey
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionnairesController#export (for 127.0.0.1 at 2011-06-08 09:03:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mQuestionnaire Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `questionnaires`[0m
+  [4;36;1mQuestionnaire Load (0.1ms)[0m   [0;1mSELECT * FROM `questionnaires` WHERE (`questionnaires`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering questionnaires/export
+  [4;35;1mResponse Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `responses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(DISTINCT `responses`.id) AS count_all FROM `responses` LEFT OUTER JOIN `answers` ON answers.response_id = responses.id LEFT OUTER JOIN `questionnaires` ON `questionnaires`.id = `responses`.questionnaire_id WHERE (`responses`.questionnaire_id = 1 AND (responses.id in (select response_id from answers))) [0m
+Rendered questionnaires/_toplevel_tabs (10.9ms)
+Rendered questionnaires/_toolbar (12.5ms)
+Completed in 137ms (View: 16, DB: 2) | 200 OK [http://localhost/questionnaires/1/export]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#journey to css (for 127.0.0.1 at 2011-06-08 09:03:28) [GET]
+Rendering stylesheets/journey
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/stylesheets/journey.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#questionnaire to css (for 127.0.0.1 at 2011-06-08 09:03:28) [GET]
+Rendering stylesheets/questionnaire
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/stylesheets/questionnaire.css]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StylesheetsController#dashboard to css (for 127.0.0.1 at 2011-06-08 09:03:28) [GET]
+
+ActionController::UnknownAction (No action responded to dashboard. Actions: ie7hacks, journey, questionnaire, response_rss_url, scaffold, and welcome):
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/viglesias/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

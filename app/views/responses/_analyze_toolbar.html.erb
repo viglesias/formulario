@@ -1,0 +1,8 @@
+<%= render :partial => "questionnaires/toplevel_tabs" %>
+
+<ul class="tabstrip2">
+	<%= tabstrip_li "Respuestas", responses_path(@questionnaire), :level => 2, :action => 'index' %>
+	<%#= tabstrip_li "Gráficas", responses_path(@questionnaire) + '/aggregate', :level => 2, :action => 'aggregate' %>
+	<%= tabstrip_li "Exportar/Ver", responses_path(@questionnaire) + '/export', :level => 2, :action => 'export' %>
+</ul>
+

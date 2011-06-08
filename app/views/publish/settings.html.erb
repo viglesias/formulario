@@ -1,0 +1,113 @@
+<%= render :partial => "toolbar" %>
+
+<script type="text/javascript">
+  Resource.model("Questionnaire", {prefix: '<%= ActionController::Base.relative_url_root %>', format: 'json'});
+  
+  /*function disableInputsIfRadioGroup(radioGroup, disabledValues, divId) {   
+    var value = $$('input[name="' + radioGroup + '"]:checked').first().value;
+    var disabled = disabledValues.any(function (disabledValue) {
+      return (value == disabledValue);
+    });
+    
+    if (disabled) {
+      $$('#' + divId + ' input').each(function (input) {
+        input.disable();
+      });
+    }
+  }
+  
+  function showHidePublishOptions() {
+    $$('input').each(function(input) {
+      input.enable();
+    });
+    disableInputsIfRadioGroup("questionnaire[login_policy]", ['unadvertised'], 'login_only_options');
+    disableInputsIfRadioGroup("questionnaire[publication_mode]", ["unpublished", "closed"], 'published_only_options');
+  }
+  
+  function setupPublishPage() {
+    showHidePublishOptions();
+    $$('input[name="questionnaire[login_policy]"], input[name="questionnaire[publication_mode]"]').each(function (el) {
+      el.observe('change', showHidePublishOptions);
+    });
+    <% if @questionnaire.is_open -%>
+      $('published_only_options').show();
+    <% else -%>
+      $('publish_this_survey').disabled = false;
+    <% end -%>
+  }
+  
+  Event.observe(window, 'load', setupPublishPage);*/
+</script>
+
+<div class="propertypage"  style="padding: 2em;">  
+<% form_for(:questionnaire, @questionnaire, :url => questionnaire_path(@questionnaire), :html => { :method => :put }) do |f| %>
+  <%= hidden_field_tag "return_to", url_for(:questionnaire_id => @questionnaire.id, :action => "index") %>
+
+  <h3>Forma de publicación</h3>
+  <div style="margin-left: 1em">
+    <ul style="list-style-type: none;">
+      <% if @questionnaire.published_at -%>
+        <li><%= f.radio_button "publication_mode", "closed" %> 
+          <%= f.label "publication_mode_closed", "Despublicar el cuestionario (mientras esté cerrado se pueden editar las preguntas)" %></li>
+      <% else -%>
+        <li><%= f.radio_button "publication_mode", "unpublished" %> 
+          <%= f.label "publication_mode_unpublished", "Dejar el cuestionario en modo diseño" %></li>
+      <% end -%>
+      <!-- <li><%#= f.radio_button "publication_mode", "hidden" %> 
+        <%#= f.label "publication_mode_hidden", "Publicar el cuestionario pero dejarlo oculto a los usuarios normales" %></li> -->
+      <li><%= f.radio_button "publication_mode", "publicly_visible" %> 
+        <%= f.label "publication_mode_publicly_visible", "Publicar el cuestionario" %></li>
+
+    </ul>
+  </div>
+  
+  <input type="hidden" name="allow_preview" value="false" />
+  <!-- 
+  Eliminada esta opción por simplicidad
+  <h3>Previewing</h3>
+  <div style="margin-left: 1em">
+    <p>People can look at a preview of this survey before taking it, if you choose to let them.  Do you want
+      to enable this feature?</p>
+    <ul style="list-style-type: none;">
+      <li><%#= f.radio_button "allow_preview", true %> 
+        <%#= f.label "allow_preview_true", "Yes, let people preview this survey" %></li>
+      <li><%#= f.radio_button "allow_preview", false %> 
+        <%#= f.label "allow_preview_false", "No, don't let people preview this survey" %></li>
+    </ul>
+  </div> -->
+
+  <input type="hidden" name="login_policy" value="unadvertised" />
+  <!-- <h3>Logging in</h3>
+  <div id="published_only_options" style="margin-left: 1em">
+    <p>If you wish, you can allow people to log into Journey before taking the survey.  Doing so will enable some further
+      options, such as the ability to submit a partial response and finish answering later.</p>
+      
+    <ul style="list-style-type: none;">
+      <li><%#= f.radio_button "login_policy", "unadvertised" %> 
+          <%#= f.label "login_policy_unadvertised", "Don't let survey takers log into Journey" %></li>
+      <li><%#= f.radio_button "login_policy", "prompt" %> 
+          <%#= f.label "login_policy_prompt", "Let survey takers choose whether or not to log in" %></li>
+      <li><%#= f.radio_button "login_policy", "required" %> 
+          <%#= f.label "login_policy_required", "Require survey takers to log in before taking this survey" %></li>
+    </ul>
+	-->
+	<input type="hidden" name="allow_finish_later" value="false" />
+	<input type="hidden" name="allow_amend_response" value="false" />
+	<input type="hidden" name="allow_delete_responses" value="false" />
+    <!--
+    Eliminado por simplicidad
+    <h4>Additional Features</h4>
+    <ul id="login_only_options" style="list-style-type: none">
+      <li><%#= f.check_box "allow_finish_later" %>
+        <%#= f.label "allow_finish_later", "Let survey takers submit a partial response and finish answering later" %></li>
+      <li><%#= f.check_box "allow_amend_response" %>
+        <%#= f.label "allow_amend_response", "Let survey takers amend their response after they've submitted it" %></li>
+      <li><%#= f.check_box "allow_delete_responses" %>
+        <%#= f.label "allow_delete_responses", "Let survey takers delete their own responses" %></li>
+    </ul> 
+  </div>
+	-->
+  <p>
+    <%= submit_tag @questionnaire.is_open ? "Guardar" : "Publicar" %>
+  </p>
+<% end -%>

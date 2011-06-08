@@ -1,0 +1,12 @@
+<%= render :partial => 'analyze_toolbar' %>
+<%= javascript_include_tag responses_url(@questionnaire) + "/responseviewer.js" %>
+
+<div id="responseviewer" style="display: none; position: absolute; z-index: 1000; background-color: #fff;">
+  <%= render :partial => "response_viewer" %>
+</div>
+
+<%= render :partial => 'response_table' %>
+
+<% if @responses.length == 0 -%>
+	<p><i>No hay respuestas a este cuestionario!</i><p>
+<% end -%>

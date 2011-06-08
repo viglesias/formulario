@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+  <title><%=h @questionnaire.title%></title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <%= stylesheet_link_tag 'questionnaire' %>
+  <%= stylesheet_link_tag 'journey' %>
+  <!--[if IE 7]>
+    <%= stylesheet_link_tag 'ie7hacks' %>
+  <![endif]-->
+  <!--[if IE 6]>
+    <%= stylesheet_link_tag 'ie7hacks' %>
+    <%= stylesheet_link_tag 'ie6hacks' %>
+  <![endif]-->
+  <style type="text/css">
+
+                <% if @questionnaire and not @suppress_custom_css -%>
+                        <%= strip_tags @questionnaire.custom_css %>
+                <% end -%>
+  </style>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jester' %>
+  <%= javascript_include_tag 'jipe' %>
+</head>
+<body>
+<% if @questionnaire and not @suppress_custom_html -%>
+        <%= @questionnaire.custom_html %>
+<% end -%>
+
+<% if flash[:error_messages] -%>
+        <div style="color: red; font-size: 125%;">Han ocurrido errores procesando su petición:</div>
+        <ul>
+                <% flash[:error_messages].each do |error| -%>
+                        <li style="color: red"><%= error %></li>
+                <% end -%>
+        </ul>
+<% end %>
+
+<%= @content_for_layout %>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<%= render :partial => "toolbar" %>
+
+<script type="text/javascript">
+  Resource.model("Questionnaire", {prefix: '<%= ActionController::Base.relative_url_root %>', format: 'json'});
+</script>
+
+<div class="propertypage">
+  <% form_for(:questionnaire, @questionnaire, :url => questionnaire_path(@questionnaire), :html => { :method => :put }) do |f| %>
+
+    <h3>Contenido</h3>
+    <p>Este contenido ser&aacute; mostrado en la parte superior de cada cuestionario antes de cualquier pregunta.</p>
+    <%= render :partial => "html_editor", :locals => {:obj => @questionnaire, :field => "custom_html"}%>
+
+    <h3>CSS</h3>
+    <p>Puede utilizar este campo para darle un dise&ntilde;o espec&iacute;fico a los cuestionarios a trav&eacute;s de estilos CSS</p>
+    <%= f.text_area "custom_css", :rows => 5 %>
+    <p><%= submit_tag %></p>
+  <% end -%>
+</div>

@@ -1,0 +1,17 @@
+<% if not @resp.submitted -%>
+	<h1>Sesión guardada</h1>
+	
+	<p>Ha guardado las respuestas. Cuando vuelva al cuestionario podrá continuar donde lo dejó.</p>
+<% else -%>
+	<h1>Gracias</h1>
+	
+	<p>Se han enviado correctamente las respuestas al cuestionario <%=h @resp.questionnaire.title %>.</p>
+<% end -%>
+
+<ul>
+  <li>
+    <%= link_to "Volver a la página principal &raquo;", url_for("/") %>
+  </li>
+</ul>
+
+	

@@ -1,0 +1,86 @@
+<div class="response" id="response">
+  <% last_page = nil -%>
+
+  <table class="question" id="notes">
+    <tr>
+      <td class="caption" style="width: 20%;">
+        <% if @editing -%>
+          <label for="response_notes">Respuestas</label>
+        <% else -%>
+          Respuestas
+        <% end -%>
+      </td>
+      <td class="questionbody">
+        <%# if @editing -%>
+          <%#= text_area_tag "response[notes]", resp.notes %>
+        <%# else -%>
+          <%= simple_format resp.notes %>
+        <%# end -%>
+      </td>
+    </tr>
+  </table>
+
+  
+		<table width="100%" cellpadding="1px">
+        	<% i = 0 %>
+        	<% @questionnaire.fields.each do |question| -%>
+        	 <% answer = resp.answer_for_question(question) -%>
+
+        		<% if question.type =~ /Questions::FormaData/ %>
+        		       	<tr><td class="question_forma_label"><%= question.caption %></td>
+        		       	<td class="question_forma_data" id="question_<%=question.id%>">
+                			<%= render_answer(question, answer) %>
+              			</td></tr>
+        		
+        		<% elsif question.type =~ /Questions::Forma/ %>
+        		
+        			<%
+        			if i == 0 %>
+        				<%= "<tr>" %>
+        				<% 
+        				estilo = ' question_forma_35'
+        			else
+        				estilo = ' question_forma_20'
+        			end
+        			%>
+        		
+        	 		<% if question.type =~/Questions::FormaLab/ %>
+        	 	    	<!-- <td class="question_forma_label" id="question_<%#=question.id%>"> -->
+        	 	    	<td class="question_forma_label <%=estilo%>" id="question_<%=question.id%>">
+                			<%= question.caption %>
+              			</td>
+        	 		<% elsif question.type =~/Questions::FormaHead/ %>
+        	 				<th class="question_forma_heading <%=estilo%>" id="question_<%=question.id%>">
+        	 				<%= question.caption %>
+        	 			</th>
+        	 		<% else %>
+        	  			<td class="question_forma  <%=estilo%>" id="question_<%=question.id%>">
+                			<%= render_answer(question, answer) %>
+              			</td>
+                	<% end %>
+                	<% 
+             		i = i + 1
+             		%>
+             		<%
+             		if i == 4
+             		%>
+             			<%= "</tr>" %>
+             		<%	i = 0
+             		end
+             		%>	 
+              	<% else -%>
+              	<tr>
+              		<td><%= question.caption %></td>
+              		<td class="question" id="question_<%=question.id%>">
+                		<%#= render_question question %>
+                		<%= render_answer(question, answer) %>
+              		</td>
+              	</tr>
+             	<% end %>
+             	
+          	<% end -%>
+         <!-- </ul> -->
+         </table> 
+
+  
+</div>

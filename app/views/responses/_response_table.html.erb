@@ -1,0 +1,65 @@
+<style type="text/css">
+#responsetable td, #responsetable th {
+  border-left: 1px #aaa solid;
+}
+
+#responsetable th {
+  background-color: #aaa;
+}
+
+#responsetable td:first-child, #responsetable th:first-child {
+  border-left: none;
+}
+</style>
+
+<div id="responses">
+<% if @count == 0 %>
+<p>No se han encontrado respuestas.</p>
+<% else %>
+  <% form_tag({}, :method => "get", :id => "response_table_options") do %>
+    <% header_fields = @questionnaire.special_field_associations.select { |sfa| sfa.purpose != 'name' }%>
+    <table id="responsetable" style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <th></th>
+          <% @columns.each_with_index do |column, index| -%>
+            <th>
+              <%= column_selector(column, index + 1) %>
+            </th>
+          <% end -%>
+        </tr>
+        <% @responses.each do |response| %>
+            <tr class="<%=cycle "even", "odd" %>" style="height: 0">
+              <td style="width: 20px; background-color: white; vertical-align: middle; background-color: #eee; border: 1px #999 solid;">
+			  	<%=link_to_remote image_tag("view-response.png", :alt => "View response", :title => "View response", :style => "margin: 2px;"), 
+					:url => response_path(@questionnaire, response, :format => "js"), :class => "viewresponse", :method => "get" %>
+			  </td>
+              <% @columns.each do |column| -%>
+                <td>
+                  <% if column.kind_of? Question -%>
+		    <% if ans = response.answer_for_question(column) -%>
+		      <%= ans.output_value %>
+		    <% end -%>
+                  <% elsif column == "submitted_at" -%>
+                    <% if response.submitted -%>
+                      <%= response.submitted_at %>
+                    <% else -%>
+                      <b>Partial</b>
+                    <% end -%>
+                  <% elsif column -%>
+                    <%= response.send(column) %>
+                  <% end -%>
+                </td>
+              <% end -%>
+            </tr>
+        <% end %>
+				<% (Response.per_page - @responses.length).times do %>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        <% end%>
+    </table>
+    <%= will_paginate @responses, :renderer => "RemoteLinkRenderer", :remote => {
+		} %>
+  <% end %>
+<% end %>
+  </div>

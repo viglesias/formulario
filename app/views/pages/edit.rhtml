@@ -1,0 +1,169 @@
+<% @editing = true -%>
+
+<%= javascript_include_tag 'questionnaireedit' %>
+<%= javascript_include_tag "layout.js" %>
+<script type="text/javascript">
+    setupQuestionnaireEditing(<%= @questionnaire.id %>, <%= @page.id %>, '<%= ActionController::Base.relative_url_root %>');
+</script>
+
+<div class="answerpage" id="answerpage">
+        <div class="pagetitle"><span id="page_title"><%= @page.title %></span>
+          <%= image_tag("jipe/edit-field.png", { :id => "edit_page_title", :alt => "Editar el título de la página", :title => "Editar el título de la página" }) %>
+        </div>
+
+<script type="text/javascript">
+new Jipe.InPlaceEditor("page_title", Page, <%= @page.id %>, 'title',
+   { externalControl: 'edit_page_title',
+     onComplete: function () {
+       if (parent != null) {
+         try {
+           parent.document.getElementById('page_<%= @page.id %>').getElementsBySelector('.caption').each(function (caption) {
+             caption.update($('page_title').innerHTML);
+           });
+         } catch (e) {
+         }
+       }
+     } });
+</script>
+
+        <% if @questionnaire.pages.length > 1 -%>
+                <div class="pagecount">Page <%= @page.number %> of <%= @questionnaire.pages.length %></div>
+        <% end -%>
+		<% i = 0 %>
+        <ul id="questions">
+        <% @page.questions.each do |question| -%>
+        	 <% if question.type =~ /Questions::Forma/ %>
+        	 <% if i == 0
+        		estilo = ' question_forma_35 '
+        	   else
+        		estilo = ' question_forma_20 '
+        	   end %>
+        	 	<% if question.type =~/Questions::FormaLab/ %>
+        	 	    <li class="question_forma_label <%=estilo%>" id="question_<%=question.id%>">
+                		<%= render_question question %>
+              		</li>
+        	 	<% elsif question.type =~/Questions::FormaHead/ %>
+        	 		<li class="question_forma_heading  <%=estilo%>" id="question_<%=question.id%>">
+        	 		<%= render_question question %>
+        	 		</li>
+        	 	<% else %>
+        	  		<li class="question_forma  <%=estilo%>" id="question_<%=question.id%>">
+                		<%= render_question question %>
+              		</li>
+                <% end %>
+                	<% i = i + 1 %>
+             		<% if i == 4
+             		i = 0 %>
+             		<%= '<div style="clear: both;"><!-- asdf --></div>' %>
+             		<% end %> 
+              <% else -%>
+              	<li class="question <%= question_cycle(question) %>" id="question_<%=question.id%>">
+                	<%= render_question question %>
+              	</li>
+             <% end %>
+             
+          <% end -%>
+          </ul>
+          <%= sortable_element "questions", :handle => "draghandle",
+              :url => questions_path(@questionnaire, @page) + '/sort',
+              :complete => "zebrifyQuestions();" %>
+          <div class="navbuttons">
+            <% if @page.number > 1 -%>
+              <%= submit_tag "<< Página anterior" %>
+            <% end -%>
+            <% if @page.number < @questionnaire.pages.length -%>
+              <%= submit_tag "Página siguiente >>" %>
+              <% 5.times { %>&nbsp;<% } %>
+              <%= submit_tag "Finalizar más tarde" %>
+            <% else -%>
+              <%= submit_tag "Finalizar" %>
+            <% end -%>
+         </div>
+</div>
+
+<div id="toolboxspacer">
+</div>
+
+<div id="toolbox">
+  <div id="add_fields_toolbox">
+    <table style="width: 100%;">
+      <tr>
+        <td style="width: 8em;">
+          <b>Añadir campos</b><br/>
+          <p style="font-size: 80%; line-height: 1.0; font-style: italic; margin-top: 2px;">Pulsa sobre los botones para añadir un elemento al cuestionario</p>
+        </td>
+        <td>
+          <ul class="tabstrip alwaysopen" style="margin: 0;">
+			<li id="fields_tab"><%= link_to_function "Cuestionario normal", "selectTab('fields');" %></li>
+	    	<!-- <li id="specials_tab"><%#= link_to_function "Datos personales", "selectTab('specials');" %></li> -->
+            <!-- <li id="decorators_tab"><%#= link_to_function "Elementos HTML", "selectTab('decorators');" %></li> -->
+            <li id="specialfields_tab"><%= link_to_function "Cuestionario necesidades", "selectTab('specialfields');" %></li>
+          </ul>
+          <!-- <ul id="decorators" style="display: none; margin: 0;" class="tabpage">
+            <%# Question.decorator_types.each do |klass| -%>
+              <%#= button_to_function h(klass.friendly_name), "addQuestion('#{klass.name}');" %>
+            <%# end -%>
+          </ul> -->
+          <ul id="fields" style="margin: 0;" class="tabpage">
+            <% Question.menu_field_types.each do |klass| -%>
+              <%= button_to_function h(klass.friendly_name), "addQuestion('#{klass.name}');" %>
+            <% end -%>
+          </ul>
+          <ul id="specialfields" style="margin: 0;" class="tabpage">
+            <%# Question.field_types.each do |klass| -%>
+            <%= button_to_function "Campo información", "addQuestion('Questions::FormaDataTextField');" %>
+
+            <%= button_to_function "Cabecera sección", "addQuestionSpecial('Questions::FormaHeadingTitle');addQuestionSpecial('Questions::FormaHeading');addQuestionSpecial('Questions::FormaHeading');addQuestionSpecial('Questions::FormaHeading');" %>
+              <%= button_to_function "Linea formulario", "addQuestionSpecial('Questions::FormaLabel');addQuestionSpecial('Questions::FormaTextField');addQuestionSpecial('Questions::FormaDropDownFieldNivel');addQuestionSpecial('Questions::FormaDropDownFieldMod');" %>
+            <%# end -%>
+          </ul>
+	  	<!-- <ul id="specials" style="display: none; margin: 0;" class="tabpage">
+	    <%# Questionnaire.special_field_purposes.each do |purpose| -%>
+	      <%#= button_to_function h(purpose.humanize), "addQuestion('#{Questionnaire.special_field_type(purpose).name}', '#{purpose}');" %>
+            <%# end -%>
+	  	</ul> -->
+        </td>
+        <td style="text-align: right; vertical-align: top;">
+          <b><%= link_to_function "&darr;",
+            "$('add_fields_toolbox').toggle(); $('add_fields_toolbox_hidden').toggle(); sizeToolboxSpacer();",
+            :style => "text-decoration: none; color: #754500;" %></b>
+          <br/>
+          <span class="button" onClick="setDefaultLayout('left');" id="left_layout"><%= image_tag("left-layout.png",
+			:alt => "Pregunta junto a la respuesta", :title => "Pregunta junto a la respuesta") %></span>
+          <br/>
+          <span class="button" onClick="setDefaultLayout('top');" id="top_layout"><%= image_tag("top-layout.png",
+			:alt => "Pregunta debajo de la respuesta", :title => "Pregunta debajo de la respuesta") %></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="add_fields_toolbox_hidden" style="display: none;">
+    <table style="width: 100%;">
+      <tr>
+        <td>
+          <b>Añadir campos</b>
+        </td>
+        <td style="text-align: right;">   
+          <b><%= link_to_function "&uarr;",
+            "$('add_fields_toolbox').toggle(); $('add_fields_toolbox_hidden').toggle(); sizeToolboxSpacer();",
+            :style => "text-decoration: none; color: #754500;" %></b>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- don't let the toolbox cover stuff -->
+<script type="text/javascript">
+function sizeToolboxSpacer() {
+  if (!viewportSizeChanged()) {
+    return;
+  }
+  newHeight = findPos($('toolbox'))[1] + 5;
+  $('toolboxspacer').style.height = newHeight + "px";
+}
+
+Event.observe(window, 'load', sizeToolboxSpacer);
+Event.observe(window, 'resize', sizeToolboxSpacer);
+Event.observe(window, 'load', function() { selectTab('specials'); });
+</script>

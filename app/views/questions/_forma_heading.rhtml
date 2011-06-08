@@ -1,0 +1,5 @@
+<%= start_question @question, :is_display => true %>
+	<!-- <div class="question_forma_heading"> -->
+   		<%= jipe_editor(@question, "caption", :class => "Question", :rows => 1, :editing => @editing) %>
+   	<!-- </div> -->
+<%= end_question @question, :is_display => true %>

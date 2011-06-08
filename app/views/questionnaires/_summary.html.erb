@@ -1,0 +1,19 @@
+<%  links = []
+    if @questionnaire.is_open
+      links << link_to("Answer", :controller => "answer", :action => "index", :id => @questionnaire.id)
+    end
+        links << link_to(pluralize(@questionnaire.valid_responses.size, "Response"), responses_path(@questionnaire))
+        links << link_to('Delete', questionnaire_path(@questionnaire), :confirm => 'Are you sure?', :method => :delete)
+        links << link_to('Export', questionnaire_path(@questionnaire) + ".xml")
+    end
+  -%>
+  <div id="questionnairesummary_<%=@questionnaire.id%>_open">
+    <h3 style="display: inline; margin-top: 0;"><%= link_to @questionnaire.title, @questionnaire %></h3>
+    <p>
+      <%= pluralize(@questionnaire.pages.count, "page") %><br/>
+      <%= pluralize(@questionnaire.fields.count, "question") %>
+    </p>
+    <p style="margin-bottom: 0;">
+      <%= links.join(" ") %>
+    </p>
+  </div>

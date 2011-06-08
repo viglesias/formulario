@@ -1,0 +1,76 @@
+<%= error_messages_for :questionnaire %>
+<%= javascript_include_tag "layout.js" %>
+
+<%= render :partial => "toolbar" %>
+
+<script type="text/javascript">
+  Resource.model("Questionnaire", {prefix: '<%= ActionController::Base.relative_url_root %>', format: 'json'});
+</script>
+
+<% @editing = true -%>
+
+<div class="propertypage">
+<% form_for(:questionnaire, @questionnaire, :url => questionnaire_path(@questionnaire), :html => { :method => :put }) do |f| %>
+                
+    <h2 style="display: inline; margin-top: 0;">
+      <%= jipe_editor @questionnaire, :title, :editing => @editing %>
+    </h2>
+        
+    <p>
+      <%#= pluralize(@questionnaire.pages.count, "page") %><br/>
+      Tiene <%= pluralize(@questionnaire.fields.count, "pregunta") %>
+    </p>
+    
+    <h3>Página de entrada al cuestionario</h3>
+    
+    
+    <% if @editing -%>
+  	  <p>La página de entrada al cuestionario es lo primero que verán los alumnos antes de rellenar el cuestionario. Estará formada por una introducción y un botón de acceso al cuestionario.</p>
+    
+      <p>Se puede introducir texto plano o código HTML para un formateo más avanzado</p>
+	  
+	  <div style="border: 1px black solid; background-color: white; padding: 0.5em; max-width: 60em;" id="welcome_page_preview">
+		<%= @questionnaire.welcome_text %>
+		<p>
+		  <%= button_to_function "Editar &raquo;" do |page|
+			page['welcome_page_editor'].show
+			page['welcome_page_preview'].hide
+		  end -%>
+		</p>
+	  </div>
+	  
+	  <div id="welcome_page_editor" style="display: none; width: 60em;">
+        <%= render :partial => "html_editor", :locals => {:obj => @questionnaire, :field => "welcome_text"}%>
+	  </div>
+    <% else -%>
+	  <% if @questionnaire.welcome_text.blank? -%>
+	  	<p>Este cuestionario no tiene introducción.</p>
+	  <% else -%>
+        <div style="border: 1px black solid; background-color: #eee; padding: 0.5em; color: #333;">
+          <%= @questionnaire.welcome_text %>
+        </div>
+	  <% end -%>
+    <% end -%>
+    
+    <% if @editing -%>
+      <p><%= submit_tag "Guardar cambios" %></p>
+    <% end -%>
+<% end %>
+
+<% if @editing -%>
+  <h3>Borrar el cuestionario</h3>
+
+  <p>Esto borrará el cuestionario y sus respuestas <i>permanentemente</i>.
+	Es recomendable exportar <%= link_to "el cuestionario", :action => "export" %> y 
+	<%= link_to "sus respuestas", export_responses_path(@questionnaire) %> antes de proceder.</p>
+  
+  <%= link_to "Borrar cuestionario", questionnaire_path(@questionnaire), :method => "delete",
+	  :confirm => "¿Está seguro que desea borrar el cuestionario \"#{@questionnaire.title}\" y todas " +
+				  "sus respuestas?",
+	  :style => "border: 1px #f00 solid; background-color: #faa; color: black;
+	             padding: 0.5em; margin: 0.5em; cursor: pointer;
+	             text-decoration: none; font-weight: bold;
+				 border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;" %>
+<% end -%>
+
+</div>

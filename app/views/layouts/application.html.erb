@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+  <title><%= page_title %></title>
+<!--  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />  
+  <%= stylesheet_link_tag 'journey' %>
+  <%= stylesheet_link_tag 'questionnaire' %>
+  <%= stylesheet_link_tag 'dashboard' %>
+  <!--[if IE 7]>
+    <%= stylesheet_link_tag 'ie7hacks' %>
+  <![endif]-->
+  <!--[if IE 6]>
+    <%= stylesheet_link_tag 'ie7hacks' %>
+    <%= stylesheet_link_tag 'ie6hacks' %>
+  <![endif]-->
+  <%#= stylesheet_link_tag 'auth' %>
+  <% Journey::SiteOptions.additional_stylesheets.each do |ss| -%>
+    <%= stylesheet_link_tag ss %>
+  <% end -%>
+  
+  <%= yield :stylesheets %>
+  
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jester' %>
+  <%= javascript_include_tag 'jipe' %>
+  <%= javascript_include_tag 'overlabel' %>
+  <%= javascript_include_tag "layout" %>
+  
+  <%= yield :javascripts %>
+  
+  <%= include_tiny_mce_if_needed %>
+</head>
+<body id="body">
+
+<% if flash[:error_messages] -%>
+    <div class="errors">
+        <h2>Han ocurrido errores procesando su petición:</h2>
+        <ul>
+                <% flash[:error_messages].each do |error| -%>
+                        <li><%= error %></li>
+                <% end -%>
+        </ul>
+    </div>
+<% end %>
+
+<div style="clear: both;"></div>
+
+<%= yield %>
+
+<% if Journey::SiteOptions.footer_partial -%>
+	<div id="footer">
+		<%= render :partial => Journey::SiteOptions.footer_partial %>
+	</div>
+<% end -%>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<%= render :partial => "toolbar" %>
+
+<style type="text/css">
+
+#content {
+
+  background-color: white;
+  padding: 2em;
+}
+
+#content h3 {
+  margin-top: 0;
+}
+</style>
+
+<script type="text/javascript">
+/*function selectFeature(id, link) {
+  $$('#content .publish_feature').each(function(element) {
+    element.hide();
+  });
+  $$('#feature_links a').each(function(element) {
+    element.removeClassName('selected');
+  });
+  $(id).show();
+  link.addClassName('selected');
+}
+
+document.observe("dom:loaded", function () {
+  selectFeature("link_button", $('link_button_link'));
+});*/
+</script>
+
+<div class="propertypage" style="padding: 0;">
+  <!-- <div id="leftbar">
+    <h2 style="margin-top: 0;">Spread the word!</h2>
+
+    <p style="margin-right: 0.5em;">Your survey is published and accepting
+    responses!  Here are some ways to get people to your survey:</p>
+  
+    <ul id="feature_links">
+      <li><%#= feature_link "Link button", "link_button" %></li>
+      <li><%#= feature_link "Direct link", "direct_link" %></li>
+      <li><%#= feature_link "Embed your survey", "embed_survey" %></li>
+    </ul>
+  </div> -->
+
+  <div id="content">
+    <%= render :partial => "direct_link" %>
+    <%#= render :partial => "link_button" %>
+    <%#= render :partial => "embed_survey" %>
+  </div>
+</div>

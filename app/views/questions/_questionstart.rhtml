@@ -1,0 +1,35 @@
+<div class="question<% unless is_display %> layout-<%= @question.layout %><% end %>">
+<% if @editing -%>
+  <span class="draghandle">
+    <%=image_tag("drag-handle.png", :alt => "Arrastrar para cambiar el orden de las preguntas", :title => "Arrastrar para cambiar el orden de las preguntas")%>
+  </span>
+<% end -%>
+<span class="questionandcaption">
+  <% if not is_display -%>
+    <label class="caption<% if @question.required %> required<% end %>" id="question_<%=@question.id%>_header" for="question_<%= @question.id %>">
+      <% if @editing -%>
+        <%= jipe_image_toggle(@question, "required", "required.png", "not-required.png",
+            :class => "Question", 
+            :on_complete => "function () { 
+              e = $('question_#{@question.id}_header'); 
+              if (this.record[this.field]) {
+                e.addClassName('required');
+              } else {
+                e.removeClassName('required');
+              }
+              new Effect.Highlight('question_#{@question.id}_caption');
+              } ") %>
+      <% end -%>
+              <%= jipe_editor(@question, "caption", :class => "Question",
+      :editing => @editing ) %>
+    </label>
+  <% end -%>
+  <span class="questionbody" id="questionbody_<%=@question.id%>">
+  <% if @editing and @question.respond_to? "purpose" -%>
+    <% if not (@question.purpose.nil? or @question.purpose == "") -%>
+      <span class="special_purpose">
+        <%= image_tag "set-special-purpose.png", :alt => "Special purpose field" %>
+        <%=h @question.purpose %>
+      </span>
+    <% end -%>
+  <% end -%>

@@ -1,0 +1,82 @@
+<div class="answerpage" id="answerpage">
+<div class="pagetitle"><%=h @questionnaire.title %></div>
+
+<p><%= @questionnaire.welcome_text %></p>
+
+<style type="text/css">
+.questionnaire_startbox table th {
+  text-align: left;
+}
+
+.questionnaire_startbox table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.questionnaire_startbox table tr {
+  background-color: #eee;
+}
+
+.questionnaire_startbox table tr.odd {
+  background-color: #ddd;
+}
+
+.questionnaire_startbox table td, .questionnaire_startbox table th {
+  padding: 2px;
+}
+
+.bigbutton.full {
+  width: 388px;
+  text-align: center;
+}
+
+.bigbutton.half {
+  width: 180px;
+  text-align: center;
+  font-size: 115%;
+}
+
+.bigbutton.green {
+  background-color: #6aba32;
+  border-color: #6aba32;
+}
+
+.bigbutton.blue {
+  background-color: #32bad0;
+  border-color: #32bad0;
+}
+
+.bigbutton.gold {
+  background-color: #d0ba32;
+  border-color: #d0ba32;
+}
+
+.bigbutton.lavender {
+  background-color: #d09ad0;
+  border-color: #d09ad0;
+}
+
+.bigbutton.small {
+  font-size: 90%;
+  width: 388px;
+  text-align: center;
+}
+</style>
+
+<!-- <div class="questionnaire_startbox"> -->
+
+
+  <% content_for :startbox_main_option do -%>
+     <p><%= link_to "Comenzar cuestionario &raquo;", { :action => 'start', :id => @questionnaire.id }, :class => "bigbutton" %></p>
+  <% end -%>
+  
+  <%#= yield :startbox_heading -%>
+  <%= yield :startbox_main_option -%>
+  <!-- <ul style="padding-left: 0; margin-left: 0; list-style-type: none;">
+    <%#= yield :startbox_additional_options -%>
+  </ul> -->
+  <%#= yield :startbox_additional_content -%>
+<!-- </div> -->
+</div>
+      
+  

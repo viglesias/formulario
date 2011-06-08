@@ -1,0 +1,16 @@
+<%= render :partial => "toolbar" %>
+
+<div class="propertypage" style="padding: 2em;">
+  <p>
+    <% if @questionnaire.publication_mode == "unpublished" -%>
+      Este cuestionario está actualmente en <b>modo diseño</b>.
+    <% else -%>
+      Este cuestionario está actualmente <b>cerrado a nuevas respuestas</b>.
+    <% end -%>
+    Para permitir responder el cuestionario, hay que publicarlo. Mientras que esté publicado no se podrán modificar las preguntas.
+  </p>
+
+  <% link_to({ :questionnaire_id => @questionnaire.id, :action => "settings" }, { :class => "bigbutton" }) do -%>
+    Publicar &raquo;
+  <% end -%>
+</div>

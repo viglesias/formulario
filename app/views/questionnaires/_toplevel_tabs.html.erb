@@ -1,0 +1,11 @@
+<ul class="tabstrip">
+	<%= tabstrip_li "Cuestionario", @questionnaire, :controller => 'questionnaires' %>
+	<%= tabstrip_li "Publicar", questionnaire_path(@questionnaire) + '/publish', :controller => 'publish' %>
+	<%= tabstrip_li "Respuestas (#{@questionnaire.valid_responses.size})", responses_path(@questionnaire), :controller => 'responses' %>
+	<%= tabstrip_li "Responder/Previsualizar", { :controller => "answer", :action => "index", :id => @questionnaire.id }, :class => "external", :disabled => (not @questionnaire.is_open) %>
+	
+	|||
+	
+	<%= tabstrip_li "Listado cuestionarios", questionnaires_path, :controller => 'questionnaires', :only => 'index' %>
+	<%= tabstrip_li "Crear cuestionario", new_questionnaire_path, :controller => 'questionnaires', :only => 'new' %>
+</ul>

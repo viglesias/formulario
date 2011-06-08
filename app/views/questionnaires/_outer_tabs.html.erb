@@ -1,0 +1,4 @@
+<ul class="tabstrip">
+	<%= tabstrip_li "Listado cuestionarios", questionnaires_path, :controller => 'questionnaires', :only => 'index' %>
+	<%= tabstrip_li "Crear cuestionario", new_questionnaire_path, :controller => 'questionnaires', :only => 'new' %>
+</ul>

@@ -1,0 +1,16 @@
+<%= render :partial => 'analyze_toolbar' %>
+
+<div class="propertypage">
+  <h2>Exportar</h2>
+  
+  <p>Exportar todas las respuestas de este cuestionario a excel (en formato CSV).</p>
+    
+  <% form_tag(responses_path(@questionnaire, :format => "csv"), :method => "get", :style => "margin-left: 1em;") do -%>
+    <input type="hidden" name="rotate" value="true" />
+    <%= submit_tag "Exportar" %>
+  <% end -%>
+  
+  <h2>Ver las respuestas en formato HTML</h2>
+  <p>Pulsa el botón ver para mostrar todas las respuestas en una página.</p>
+  <%= button_to "Ver", responses_path(@questionnaire) + '/print', :method => "get" %>
+</div>

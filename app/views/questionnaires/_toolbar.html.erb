@@ -1,0 +1,8 @@
+<%= render :partial => "toplevel_tabs" %>
+
+<ul class="tabstrip2">
+	<%= tabstrip_li "Detalles", @questionnaire, :level => 2, :action => 'show' %>
+    <%= tabstrip_li "Editar", edit_questionnaire_path(@questionnaire), :level => 2, :action => 'edit', :disabled => @questionnaire.is_open %>
+    <%= tabstrip_li "Configurar", customize_questionnaire_path(@questionnaire), :level => 2, :action => 'customize' %>
+    <%= tabstrip_li "Exportar/Previsualizar", export_questionnaire_path(@questionnaire), :level => 2, :action => 'export' %>
+</ul>
